@@ -4,10 +4,11 @@
 /* Variables */
 :root {
     --white: #F2F2F2;
-    --black: #2C3639;
+    --black: #1A1A40;
     --brown: #A27B5C;
     --beige: #E4DCCF;
     --gray: #7D9D9C;
+    --indigo: #444CF7;
 }
 
 /* General Styles */
@@ -28,8 +29,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* background: var(--beige); */
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #DCD7C9 27px ), repeating-linear-gradient( #A27B5C55, #A27B5C );
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 25px ), repeating-linear-gradient( #8a90ff55, #8a90ff );
 }
 
 /* Navbar styles */
@@ -119,7 +119,7 @@ body {
 .hero__title {
     font-size: 4.25em;
     margin-bottom: 0.625rem;
-    color: black;
+    color: var(--black);
     font-family: 'Yeseva One', cursive;
 }
 
@@ -151,4 +151,116 @@ body {
 .hero__button:active {
     transform: scale(0.90);
     box-shadow: 0px 25px 25px -3px rgba(0,0,0,0.2);
+}
+
+/* Main styles */
+.main {
+    width: 90%;
+    margin: auto;
+}
+
+/* About Section Styles */
+.about {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__me {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.about__image {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 4px var(--black);
+    border-style: dashed solid;
+}
+
+.about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 -40px;
+}
+
+.about__title {
+    margin-bottom: 2.5rem;
+    color: var(--indigo);
+    font-size: 4.25em;
+    font-family: 'Yeseva One', cursive;
+}
+
+.about__description {
+    text-align: justify;
+    color: var(--black);
+}
+
+.about__button {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 0.875em;
+    font-weight: 600;
+    padding: 0.9375rem 2.5rem;
+    border: 1px solid var(--black);
+    border-radius: 0.625rem;
+    text-decoration: none;
+    color: var(--black);
+    background: transparent;
+    transition: .2s all ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.about__button::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--black);
+    transition: .2s all ease;
+    z-index: -1;
+}
+
+.about__button:hover {
+    color: var(--white);
+}
+
+.about__button:hover::before {
+    width: 100%;
+}
+
+.about__skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about__subtitle {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.about__list {
+    display: flex;
+    gap: 2.5em;
+    margin-top: 1.25rem;
+}
+
+.about__item {
+    font-size: 3em;
+    list-style: none;
+    color: var(--gray);
 }
