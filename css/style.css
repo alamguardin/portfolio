@@ -157,3 +157,14 @@ body {
         background: rgba(255, 255, 255, 0.2);
     }
 }
+
+/* Hero section Styles */
+.hero {
+    width: 90%;
+    height: calc(100% - 60px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
